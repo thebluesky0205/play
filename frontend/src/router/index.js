@@ -1,0 +1,40 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import FirstPage from '@/views/FirstPage'
+import MainDashBoard from '@/components/FirstLayout/MainDashBoard'
+
+import test from '@/components/FirstLayout/test'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: test
+  },
+  {
+    path: '/MainDashBoard',
+    name: 'MainDashBoard',
+    component: MainDashBoard
+  },
+  {
+    path: '/firstPage',
+    name: 'FirstPage',
+    component: FirstPage
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+
+export default router
